@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import { config } from './config';
 import { errorMiddleware } from './middleware/error.middleware';
 import { rateLimiter } from './middleware/rateLimit.middleware';
+import { requestLoggerMiddleware } from './middleware/logger.middleware';
 import authRoutes from './routes/auth.routes';
 import verificationRoutes from './routes/verification.routes';
 import credentialRoutes from './routes/credential.routes';
@@ -19,6 +20,9 @@ app.use(cors({
   origin: config.cors.origin,
   credentials: config.cors.credentials,
 }));
+
+// Request logging
+app.use(requestLoggerMiddleware);
 
 // Rate limiting
 app.use(rateLimiter);
