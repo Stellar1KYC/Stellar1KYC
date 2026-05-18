@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = [
+    "identity-registry",
+    "identity-nft",
+    "shared",
+]
+
+[workspace.dependencies]
+soroban-sdk = "20.0.0"

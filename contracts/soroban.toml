@@ -1,0 +1,9 @@
+[networks]
+public = "https://horizon.stellar.org"
+testnet = "https://horizon-testnet.stellar.org"
+
+[contracts.identity_registry]
+name = "stellar1kyc-identity-registry"
+
+[contracts.identity_nft]
+name = "stellar1kyc-identity-nft"
