@@ -11,8 +11,11 @@ import credentialRoutes from './routes/credential.routes';
 import verifierRoutes from './routes/verifier.routes';
 import nftRoutes from './routes/nft.routes';
 import userRoutes from './routes/user.routes';
+import { validateEnv } from "./config/validateEnv";
 
 export const app: Application = express();
+
+validateEnv()
 
 // Security middleware
 app.use(helmet());
